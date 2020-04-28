@@ -15,10 +15,10 @@ SystemFreeSwap=`free -m | grep Swap: | awk '{print $4}'`
 echo "                                                               "
 echo "<<"$SystemLoad ">>"
 echo "Number of Login Users...................................:"$SystemLoginUserNum
-echo "Numbre of Running Processes.............................:"$SystemOpenProcesNum
+echo "Numbre of Running Processes.............................:"$SystemOpenProcesNum 
 echo "Free Memory Size(MB)....................................:"$SystemFreeMem
 echo "Free Buffers Size(MB)...................................:"$SystemFreeBuffers
 echo "Free Cache(MB)..........................................:"$SystemFreeCache
 echo "Free Swap Space Size(MB)................................:"$SystemFreeSwap
 echo ">>>>>>>>>>>>>>>>>>>>>>>Power By DaoBiDao<<<<<<<<<<<<<<<<<<<<<<<"
-echo "
+echo "                                                               "
