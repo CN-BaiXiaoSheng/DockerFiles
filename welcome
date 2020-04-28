@@ -1,0 +1,24 @@
+#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
+echo "                                                                "
+echo "Welcome $USER Login To This Server!"
+
+SystemLoad=`uptime`
+SystemLoginUserNum=`who | wc -l`
+SystemOpenProcesNum=$(expr $(ps aux | wc -l) - 1)
+SystemFreeMem=`free -m | grep Mem: | awk '{print $4}'`
+SystemFreeBuffers=`free -m | grep - | awk '{print $3}'`
+SystemFreeCache=`free -m | grep - | awk '{print $4}'`
+SystemFreeSwap=`free -m | grep Swap: | awk '{print $4}'`
+echo "                                                               "
+echo "<<"$SystemLoad ">>"
+echo "Number of Login Users...................................:"$SystemLoginUserNum
+echo "Numbre of Running Processes.............................:"$SystemOpenProcesNum
+echo "Free Memory Size(MB)....................................:"$SystemFreeMem
+echo "Free Buffers Size(MB)...................................:"$SystemFreeBuffers
+echo "Free Cache(MB)..........................................:"$SystemFreeCache
+echo "Free Swap Space Size(MB)................................:"$SystemFreeSwap
+echo ">>>>>>>>>>>>>>>>>>>>>>>Power By DaoBiDao<<<<<<<<<<<<<<<<<<<<<<<"
+echo "                                                               "
